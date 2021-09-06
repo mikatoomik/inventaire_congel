@@ -7,7 +7,7 @@
 <ul>
 <% @products.each do |product| %>
 <li>
-  <%= product.quantity %> <%= product.name %>  <%= cl_image_tag product.photo height: 300, width: 400, crop: :fill if product.photo.attached? %> depuis le <%= product.entered_on %>
+  <%= product.quantity %> <%= product.name %>   depuis le <%= product.entered_on %>
   <%= link_to 'X', product_path(product), method: :delete %>
 </li>
 <% end %>
