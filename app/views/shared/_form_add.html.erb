@@ -1,0 +1,16 @@
+<%= simple_form_for @product,
+  wrapper: :inline_form,
+  html: { class: "row row-cols-lg-auto g-3 align-items-center" },
+  wrapper_mappings: {
+    boolean: :inline_boolean
+  } do |f| %>
+
+  <%= f.input :quantity, placeholder: 'quantité' %>
+
+  <%= f.input :name, placeholder: 'produit' %>
+
+  <%= f.input :entered_on, label: 'dans le congel depuis le', as: :date, html5: true %>
+
+  <%= f.submit 'Enregistrer', class: "btn-primary" %>
+
+<% end %>
